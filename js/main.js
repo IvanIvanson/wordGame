@@ -10,8 +10,8 @@ const randomletterEl = document.querySelector(".js-random-letters"),
     wordScramble = document.querySelector(".container");
     
 
-// let initialWords = ['вид', 'кольцо', 'билет', 'издание', 'двигатель', 'банан'];
-let initialWords = ['вид', 'банан'];
+let initialWords = ['вид', 'кольцо', 'билет', 'издание', 'двигатель', 'банан'];
+// let initialWords = ['вид', 'банан'];
 
 let words = [...initialWords];
 let currentWord;
