@@ -80,6 +80,7 @@ a {
     margin-bottom: 80px;
     text-transform: uppercase;
     letter-spacing: 20px;
+    text-align: center;
 }
 
 
@@ -97,6 +98,7 @@ input {
     margin-bottom: 40px;
     font-size: 20px;
     min-height: 30px;
+    text-align: center;
 }
 
 .buttons {
@@ -117,6 +119,9 @@ input {
     color: #fff;
     cursor: pointer;
     user-select: none;
+}
+h1{
+    text-align: center;
 }
 /* модальное окно */
 .modal-container{
@@ -168,4 +173,42 @@ input {
 .disabled{
     background-color: dimgray;
     color: linen;
+}
+@media (max-width: 425px) {
+    /* модальное окно */
+.modal-container{
+    width:80%;
+    min-height:50vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    background:#44de88;
+    position:absolute;
+    top:-550px;
+    transition:0.3s;
+    border-radius: 5%;
+}
+h1{
+    font-size: 1.4rem;
+}
+.stretch-in{
+    animation: squish-in 0.5s forwards;
+    top:150px;
+}
+.btn {
+    padding: 5px 20px;
+    border-radius:3px;
+    font-size: 12px;
+    font-weight: bold;
+    background-color: #000;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    user-select: none;
+}
+.disabled{
+    background-color: dimgray;
+    color: linen;
+}
 }
