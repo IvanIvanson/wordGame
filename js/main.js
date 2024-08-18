@@ -10,8 +10,8 @@ const randomletterEl = document.querySelector(".js-random-letters"),
     wordScramble = document.querySelector(".container");
     
 
-let initialWords = ['вид', 'кольцо', 'билет', 'издание', 'двигатель', 'банан'];
-// let initialWords = ['вид', 'банан'];
+// let initialWords = ['вид', 'кольцо', 'билет', 'издание', 'двигатель', 'банан'];
+let initialWords = ['вид', 'банан'];
 
 let words = [...initialWords];
 let currentWord;
@@ -51,6 +51,7 @@ const checkWord = () => {
         scrambleWord();
     } else if(userWord === currentWord && words.length == 1){
         answerEl.textContent = 'Молодец! Ты составил все слова!';
+        answerEl.classList.remove('warning');
         words = [...initialWords];
         textInput.value = '';
         randomletterEl.textContent = '';
@@ -76,6 +77,7 @@ const checkWord = () => {
         });
        
     } else {
+        answerEl.classList.add('warning');
         answerEl.textContent = 'Неверно! Попробуй ещё раз!';
     }
     // setTimeout(() => {
